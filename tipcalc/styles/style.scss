@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+$mobileWidth: 375px;
+$desktop: 1440px;
+$strongCyan: hsl(172,
+67%,
+45%);
+$veryDarkCyan: hsl(183,
+100%,
+15%);
+$darkGrayishCyan1: hsl(186,
+14%,
+43%);
+$darkGrayishCyan2: hsl(184,
+14%,
+56%);
+$lightGrayishCyan1: hsl(185,
+41%,
+84%);
+$lightGrayishCyan2: hsl(189,
+41%,
+97%);
+$white: hsl(0,
+0%,
+100%);
+$fontSize: 24px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $lightGrayishCyan1;
+    button {
+        cursor: pointer;
+    }
+    main {
+        width: 65%;
+        .logo {
+            margin-bottom: 5rem;
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .container {
+            background-color: $white;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            .left {
+                flex: 1;
+                padding: 0 40px 0 0;
+                .leftTop {
+                    margin-bottom: 2rem;
+                    .textHeader {
+                        display: flex;
+                        justify-content: space-between;
+                        h5 {
+                            font-size: 1rem;
+                            text-transform: capitalize;
+                            color: $darkGrayishCyan1;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    input {
+                        width: 100%;
+                        padding: 5px;
+                        background: url(../images/icon-dollar.svg) no-repeat 15px 15px $lightGrayishCyan2;
+                        border: 0;
+                        border-radius: 5px;
+                        outline: 0;
+                        text-align: right;
+                        font-size: $fontSize;
+                        color: $veryDarkCyan;
+                        font-weight: 600;
+                    }
+                    input::placeholder {
+                        color: $darkGrayishCyan1;
+                    }
+                }
+                .leftMiddle {
+                    margin-bottom: 2rem;
+                    h5 {
+                        font-size: 1rem;
+                        text-transform: capitalize;
+                        color: $darkGrayishCyan1;
+                        margin-bottom: 5px;
+                    }
+                    .btns {
+                        display: flex;
+                        flex-direction: column;
+                        .btn1 {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 1rem;
+                            button {
+                                width: 30%;
+                                padding: 5px 0;
+                                border: 0;
+                                outline: 0;
+                                border-radius: 5px;
+                                background-color: $veryDarkCyan;
+                                color: $white;
+                                font-size: $fontSize;
+                            }
+                            button.active {
+                                background-color: $strongCyan;
+                                color: $veryDarkCyan;
+                            }
+                        }
+                        .btn2 {
+                            display: flex;
+                            justify-content: space-between;
+                            button {
+                                width: 30%;
+                                padding: 5px 2px;
+                                border: 0;
+                                outline: 0;
+                                border-radius: 5px;
+                                background-color: $veryDarkCyan;
+                                color: $white;
+                                font-size: $fontSize;
+                            }
+                            button.active {
+                                background-color: $strongCyan;
+                                color: $veryDarkCyan;
+                            }
+                            input {
+                                width: 30%;
+                                border: 0;
+                                outline: 0;
+                                font-size: $fontSize;
+                                background-color: $lightGrayishCyan2;
+                                text-align: right;
+                                text-transform: capitalize;
+                                color: $veryDarkCyan;
+                            }
+                            input::placeholder {
+                                color: $darkGrayishCyan1;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .leftBottom {
+                    .textHeader {
+                        display: flex;
+                        justify-content: space-between;
+                        h5 {
+                            font-size: 1rem;
+                            text-transform: capitalize;
+                            color: $darkGrayishCyan1;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    input {
+                        width: 100%;
+                        padding: 5px;
+                        background: url(../images/icon-person.svg) no-repeat 15px 15px $lightGrayishCyan2;
+                        border: 0;
+                        border-radius: 5px;
+                        outline: 0;
+                        text-align: right;
+                        font-size: $fontSize;
+                        color: $veryDarkCyan;
+                        font-weight: 600;
+                    }
+                    input::placeholder {
+                        color: $darkGrayishCyan1;
+                    }
+                }
+            }
+            .right {
+                background-color: $veryDarkCyan;
+                flex: 1;
+                border-radius: 10px;
+                padding: 50px 30px 30px 30px;
+                display: flex;
+                flex-direction: column;
+                .rightTop {
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                    h5 {
+                        flex: 1;
+                        color: $white;
+                        text-transform: capitalize;
+                        font-size: 1rem;
+                        span {
+                            color: $darkGrayishCyan2
+                        }
+                    }
+                    .output1 {
+                        flex: 1;
+                        text-align: right;
+                        font-size: $fontSize;
+                        color: $strongCyan;
+                        overflow: hidden;
+                    }
+                }
+                .rightMiddle {
+                    display: flex;
+                    align-items: flex-end;
+                    flex: 1;
+                    h5 {
+                        flex: 1;
+                        color: $white;
+                        text-transform: capitalize;
+                        font-size: 1rem;
+                        span {
+                            color: $darkGrayishCyan2
+                        }
+                    }
+                    .output2 {
+                        flex: 1;
+                        text-align: right;
+                        font-size: $fontSize;
+                        color: $strongCyan;
+                        overflow: hidden;
+                    }
+                }
+                .rightBottom {
+                    flex: 2;
+                    display: flex;
+                    align-items: flex-end;
+                    button {
+                        width: 100%;
+                        padding: 10px 0;
+                        border: 0;
+                        outline: 0;
+                        background-color: $strongCyan;
+                        color: $veryDarkCyan;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .attribution {
+            text-align: center;
+            color: $veryDarkCyan;
+            a {
+                text-decoration: none;
+                color: $strongCyan;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobileWidth),
+screen and (max-width: 1024px) {
+    body {
+        display: block;
+        padding-top: 50px;
+        button {
+            cursor: pointer;
+        }
+        main {
+            width: 100%;
+            .logo {
+                margin-bottom: 2rem;
+            }
+            .container {
+                padding: 30px;
+                flex-direction: column;
+                border-radius: 20px 20px 0 0;
+                .left {
+                    flex: 1;
+                    padding: 0;
+                    margin-bottom: 2rem;
+                    .leftMiddle {
+                        margin-bottom: 2rem;
+                        h5 {
+                            font-size: 1rem;
+                            text-transform: capitalize;
+                            color: $darkGrayishCyan1;
+                            margin-bottom: 5px;
+                        }
+                        .btns {
+                            display: flex;
+                            flex-direction: column;
+                            ;
+                            .btn1 {
+                                button {
+                                    width: 30%;
+                                    padding: 5px 0;
+                                    border: 0;
+                                    outline: 0;
+                                    border-radius: 5px;
+                                    background-color: $veryDarkCyan;
+                                    color: $white;
+                                    font-size: $fontSize;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right {
+                    padding: 20px;
+                    .rightTop {
+                        margin-bottom: 20px;
+                    }
+                    .rightMiddle {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

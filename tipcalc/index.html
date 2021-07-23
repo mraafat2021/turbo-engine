@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Tip calc</title>
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+        <div class="container">
+            <div class="left">
+                <div class="leftTop">
+                    <div class="textHeader">
+                        <h5>bill</h5>
+                        <h5 id="billError"></h5>
+                    </div>
+                    <input id="billNum" type="number" name="" placeholder="0">
+                </div>
+                <div class="leftMiddle">
+                    <h5>select tip %</h5>
+                    <div class="btns">
+                        <div class="btn1">
+                            <button type="button" value="0.05">5%</button>
+                            <button type="button" value="0.1">10%</button>
+                            <button type="button" value="0.15">15%</button>
+                        </div>
+                        <div class="btn2">
+                            <button type="button" value="0.25">25%</button>
+                            <button type="button" value="0.5">50%</button>
+                            <input id="customNum" type="number" name="" id="" placeholder="custom">
+                        </div>
+                    </div>
+                </div>
+                <div class="leftBottom">
+                    <div class="textHeader">
+                        <h5>number of people</h5>
+                        <h5 id="peopleError"></h5>
+                    </div>
+                    <input id="peopleNum" type="number" name="" id="" placeholder="0">
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightTop">
+                    <h5>tip amount <br><span>/ person</span></h5>
+                    <div id="amount" class="output1">0.00</div>
+                </div>
+                <div class="rightMiddle">
+                    <h5>total <br><span>/ person</span></h5>
+                    <div id="total" class="output2">0.00</div>
+                </div>
+                <div class="rightBottom">
+                    <button type="reset">reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">M.Raafat</a>.
+        </div>
+    </main>
+</body>
+
+</html>

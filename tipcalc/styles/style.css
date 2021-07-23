@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: #c5e4e7;
+}
+
+body button {
+  cursor: pointer;
+}
+
+body main {
+  width: 65%;
+}
+
+body main .logo {
+  margin-bottom: 5rem;
+}
+
+body main .logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+body main .container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .container .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 40px 0 0;
+}
+
+body main .container .left .leftTop {
+  margin-bottom: 2rem;
+}
+
+body main .container .left .leftTop .textHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .container .left .leftTop .textHeader h5 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #5e7a7d;
+  margin-bottom: 5px;
+}
+
+body main .container .left .leftTop input {
+  width: 100%;
+  padding: 5px;
+  background: url(../images/icon-dollar.svg) no-repeat 15px 15px #f4fafa;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  text-align: right;
+  font-size: 24px;
+  color: #00494d;
+  font-weight: 600;
+}
+
+body main .container .left .leftTop input::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftTop input:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftTop input::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftTop input::placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftMiddle {
+  margin-bottom: 2rem;
+}
+
+body main .container .left .leftMiddle h5 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #5e7a7d;
+  margin-bottom: 5px;
+}
+
+body main .container .left .leftMiddle .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .container .left .leftMiddle .btns .btn1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+body main .container .left .leftMiddle .btns .btn1 button {
+  width: 30%;
+  padding: 5px 0;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background-color: #00494d;
+  color: white;
+  font-size: 24px;
+}
+
+body main .container .left .leftMiddle .btns .btn1 button.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+body main .container .left .leftMiddle .btns .btn2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .container .left .leftMiddle .btns .btn2 button {
+  width: 30%;
+  padding: 5px 2px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background-color: #00494d;
+  color: white;
+  font-size: 24px;
+}
+
+body main .container .left .leftMiddle .btns .btn2 button.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+body main .container .left .leftMiddle .btns .btn2 input {
+  width: 30%;
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+  background-color: #f4fafa;
+  text-align: right;
+  text-transform: capitalize;
+  color: #00494d;
+}
+
+body main .container .left .leftMiddle .btns .btn2 input::-webkit-input-placeholder {
+  color: #5e7a7d;
+  text-align: center;
+}
+
+body main .container .left .leftMiddle .btns .btn2 input:-ms-input-placeholder {
+  color: #5e7a7d;
+  text-align: center;
+}
+
+body main .container .left .leftMiddle .btns .btn2 input::-ms-input-placeholder {
+  color: #5e7a7d;
+  text-align: center;
+}
+
+body main .container .left .leftMiddle .btns .btn2 input::placeholder {
+  color: #5e7a7d;
+  text-align: center;
+}
+
+body main .container .left .leftBottom .textHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .container .left .leftBottom .textHeader h5 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #5e7a7d;
+  margin-bottom: 5px;
+}
+
+body main .container .left .leftBottom input {
+  width: 100%;
+  padding: 5px;
+  background: url(../images/icon-person.svg) no-repeat 15px 15px #f4fafa;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  text-align: right;
+  font-size: 24px;
+  color: #00494d;
+  font-weight: 600;
+}
+
+body main .container .left .leftBottom input::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftBottom input:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftBottom input::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .left .leftBottom input::placeholder {
+  color: #5e7a7d;
+}
+
+body main .container .right {
+  background-color: #00494d;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 10px;
+  padding: 50px 30px 30px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .container .right .rightTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body main .container .right .rightTop h5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+body main .container .right .rightTop h5 span {
+  color: #7f9c9f;
+}
+
+body main .container .right .rightTop .output1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  font-size: 24px;
+  color: #26c0ab;
+  overflow: hidden;
+}
+
+body main .container .right .rightMiddle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body main .container .right .rightMiddle h5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+body main .container .right .rightMiddle h5 span {
+  color: #7f9c9f;
+}
+
+body main .container .right .rightMiddle .output2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  font-size: 24px;
+  color: #26c0ab;
+  overflow: hidden;
+}
+
+body main .container .right .rightBottom {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body main .container .right .rightBottom button {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  outline: 0;
+  background-color: #26c0ab;
+  color: #00494d;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+body main .attribution {
+  text-align: center;
+  color: #00494d;
+}
+
+body main .attribution a {
+  text-decoration: none;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 375px), screen and (max-width: 1024px) {
+  body {
+    display: block;
+    padding-top: 50px;
+  }
+  body button {
+    cursor: pointer;
+  }
+  body main {
+    width: 100%;
+  }
+  body main .logo {
+    margin-bottom: 2rem;
+  }
+  body main .container {
+    padding: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 20px 20px 0 0;
+  }
+  body main .container .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  body main .container .left .leftMiddle {
+    margin-bottom: 2rem;
+  }
+  body main .container .left .leftMiddle h5 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #5e7a7d;
+    margin-bottom: 5px;
+  }
+  body main .container .left .leftMiddle .btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .container .left .leftMiddle .btns .btn1 button {
+    width: 30%;
+    padding: 5px 0;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: #00494d;
+    color: white;
+    font-size: 24px;
+  }
+  body main .container .right {
+    padding: 20px;
+  }
+  body main .container .right .rightTop {
+    margin-bottom: 20px;
+  }
+  body main .container .right .rightMiddle {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
