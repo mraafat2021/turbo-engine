@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+$ModerateViolet: hsl(263,
+55%,
+52%);
+$VeryDarkGrayishBlue: hsl(217,
+19%,
+35%);
+$VeryDarkBlackishBlue: hsl(219,
+29%,
+14%);
+$White: hsl(0,
+0%,
+100%);
+$LightGray: hsl(0,
+0%,
+81%);
+$LightGrayishBlue: hsl(210,
+46%,
+95%);
+$font: 'Barlow Semi Condensed',
+sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $LightGrayishBlue;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+main {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "s1 s1 s2 s3" "s4 s5 s5 s3";
+    grid-gap: 15px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    border-radius: 10px;
+    .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        h1 {
+            flex: 1;
+            font-size: 0.7rem;
+            padding-left: 10px;
+            font-weight: 500;
+            span {
+                opacity: 50%;
+            }
+        }
+    }
+    .head {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .testimonial {
+        font-size: 0.8rem;
+        opacity: 70%;
+        height: 100%;
+    }
+}
+
+.section1 {
+    grid-area: s1;
+    color: $White;
+    background: url(../images/bg-pattern-quotation.svg) no-repeat $ModerateViolet 80% 0%;
+}
+
+.section2 {
+    grid-area: s2;
+    background-color: $VeryDarkGrayishBlue;
+    color: $White;
+}
+
+.section3 {
+    grid-area: s4;
+    background-color: $White;
+    color: $VeryDarkGrayishBlue;
+}
+
+.section4 {
+    grid-area: s5;
+    background-color: $VeryDarkBlackishBlue;
+    color: $White;
+}
+
+.section5 {
+    grid-area: s3;
+    background-color: $White;
+    color: $VeryDarkGrayishBlue;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-areas: "s1" "s2" "s3" "s4" "s5";
+    }
+    section {
+        justify-content: space-around;
+        .title {
+            height: auto;
+        }
+        .head {
+            height: auto;
+        }
+        .testimonial {
+            height: auto;
+        }
+    }
+    .section1 {
+        grid-area: s1;
+        background-color: $ModerateViolet;
+        color: $White;
+    }
+    .section2 {
+        grid-area: s2;
+    }
+    .section3 {
+        grid-area: s3;
+    }
+    .section4 {
+        grid-area: s4;
+    }
+    .section5 {
+        grid-area: s5;
+        .title {
+            height: auto;
+        }
+        .head {
+            height: auto;
+        }
+        .testimonial {
+            height: auto;
+        }
+    }
+}
