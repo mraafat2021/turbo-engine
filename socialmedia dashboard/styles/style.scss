@@ -1,0 +1,340 @@
+    @import "vars";
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+        height: 100vh;
+        background: linear-gradient(180deg, $VeryDarkBlueTopBGPattern 30%, $VeryDarkBlueBG 50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            width: 80%;
+            height: 90%;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            h1 {
+                color: $WhiteText;
+                font-size: 1.6rem;
+                span {
+                    font-size: 0.8rem;
+                    display: block;
+                    opacity: 0.5;
+                    margin-top: 5px;
+                }
+            }
+            .dark-mode {
+                display: flex;
+                align-items: center;
+                input {
+                    width: 50px;
+                    height: 26px;
+                    appearance: none;
+                    background-image: $ToggleDark;
+                    outline: none;
+                    border-radius: 15px;
+                    position: relative;
+                    margin-left: 10px;
+                }
+                input:checked {
+                    background-image: none;
+                    background-color: $ToggleBright;
+                }
+                input::before {
+                    content: "";
+                    position: absolute;
+                    left: 1px;
+                    top: 3px;
+                    bottom: 0;
+                    line-height: 25px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $VeryDarkBlueBG;
+                    transition: 0.5s ease-out;
+                }
+                input:checked::before {
+                    left: 29px;
+                }
+                span {
+                    color: $WhiteText;
+                    font-size: 0.8rem;
+                    display: block;
+                    opacity: 0.5;
+                    margin-top: 5px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .socialmedia-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            justify-content: space-between;
+            width: 100%;
+            height: 35%;
+            margin-bottom: 30px;
+            .card {
+                background-color: $DarkDesaturatedBlueCardBG;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: space-around;
+                cursor: pointer;
+                .card-header {
+                    display: flex;
+                    align-items: center;
+                    h3 {
+                        color: $WhiteText;
+                        font-size: 0.8rem;
+                        margin-left: 10px;
+                        opacity: 0.5;
+                    }
+                }
+                .followers {
+                    color: $WhiteText;
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    span {
+                        display: block;
+                        font-size: 0.7rem;
+                        opacity: 0.5;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                    }
+                }
+                .rate {
+                    display: flex;
+                    align-items: center;
+                    color: $limeGreen;
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+                .red {
+                    color: $BrightRed;
+                }
+            }
+            .card1 {
+                border-top: 3px solid $Facebook;
+            }
+            .card2 {
+                border-top: 3px solid $Twitter;
+            }
+            .card3 {
+                border-width: 3px;
+                border-style: solid;
+                border-image: $Instagram 1 0 0 0;
+                border-radius: 5px;
+            }
+            .card4 {
+                border-top: 3px solid $YouTube;
+            }
+            .card:hover {
+                background-color: hsl(229, 24%, 31%);
+            }
+        }
+        h2 {
+            color: $WhiteText;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        .statistics-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            justify-content: space-between;
+            width: 100%;
+            height: 38%;
+            .card {
+                background-color: $DarkDesaturatedBlueCardBG;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                cursor: pointer;
+                padding-inline: 20px;
+                .row1 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        color: $WhiteText;
+                        font-size: 0.8rem;
+                        opacity: 0.5;
+                        font-weight: 700;
+                    }
+                }
+                .row2 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    p {
+                        color: $WhiteText;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                    }
+                    span {
+                        color: $limeGreen;
+                        display: flex;
+                        align-items: center;
+                        font-size: 0.7rem;
+                        font-weight: 700;
+                        svg {
+                            margin-right: 4px;
+                        }
+                    }
+                    span.red {
+                        color: $BrightRed;
+                    }
+                }
+            }
+            .card:hover {
+                background-color: hsl(229, 24%, 31%);
+            }
+        }
+    }
+    
+    body.bright {
+        background: linear-gradient(180deg, $VeryPaleBlueTopBGPattern 30%, $WhiteBG 50%);
+        header {
+            h1 {
+                color: $VeryDarkBlueText;
+            }
+            .dark-mode {
+                span {
+                    color: $VeryDarkBlueText;
+                }
+            }
+        }
+        .socialmedia-cards {
+            .card {
+                background-color: $LightGrayishBlueCardBG;
+                color: $VeryDarkBlueText;
+                .card-header {
+                    h3 {
+                        color: $VeryDarkBlueText;
+                    }
+                }
+                .followers {
+                    color: $VeryDarkBlueText;
+                }
+            }
+            .card:hover {
+                background-color: rgb(226, 228, 235);
+                ;
+            }
+        }
+        .statistics-cards {
+            .card {
+                background-color: $LightGrayishBlueCardBG;
+                color: $VeryDarkBlueText;
+                .row1 {
+                    p {
+                        color: $VeryDarkBlueText;
+                    }
+                }
+                .row2 {
+                    p {
+                        color: $VeryDarkBlueText;
+                    }
+                }
+            }
+            .card:hover {
+                background-color: rgb(226, 228, 235);
+                ;
+            }
+        }
+    }
+    
+    @media screen and (max-width:750px) {
+        body {
+            height: auto;
+            padding: 40px 0;
+            header {
+                flex-direction: column;
+                h1 {
+                    align-self: flex-start;
+                }
+                .dark-mode {
+                    margin-top: 20px;
+                    padding-top: 20px;
+                    justify-content: space-between;
+                    border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    width: 100%;
+                }
+            }
+            .socialmedia-cards {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+                .card {
+                    height: 250px;
+                }
+            }
+            .statistics-cards {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                justify-content: space-between;
+                width: 100%;
+                height: auto;
+                .card {
+                    height: 100px;
+                }
+            }
+        }
+        body.bright {
+            height: auto;
+            padding: 40px 0;
+            header {
+                flex-direction: column;
+                h1 {
+                    align-self: flex-start;
+                }
+                .dark-mode {
+                    margin-top: 20px;
+                    padding-top: 20px;
+                    justify-content: space-between;
+                    border-top: 1px solid rgba(30, 32, 42, 0.5);
+                    width: 100%;
+                }
+            }
+            .socialmedia-cards {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+                .card {
+                    height: 250px;
+                }
+            }
+            .statistics-cards {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                justify-content: space-between;
+                width: 100%;
+                height: auto;
+                .card {
+                    height: 100px;
+                }
+            }
+        }
+    }
