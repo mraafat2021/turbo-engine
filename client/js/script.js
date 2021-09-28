@@ -5,6 +5,7 @@ const capital = document.getElementById("capital"); */
 const loading = document.querySelector(".loading");
 const selector = document.getElementById("regions");
 const darkLight = document.getElementById("dark-light");
+const search = document.getElementById("search");
 
 displayAllCountries();
 
@@ -32,6 +33,14 @@ function displayAllCountries() {
             console.log(data);
             displayCountries(data);
             showRegion(data);
+            search.addEventListener("keydown", (e) => {
+                if (e.key == "Enter") {
+                    searchCountries(data);
+                }
+            });
+            search.addEventListener("blur", () => {
+                searchCountries(data);
+            });
             //post
         })
         .then(() => {
@@ -61,7 +70,7 @@ function displayCountries(data) {
       i.nativeName
     }', '${i.population}', '${i.region}', '${i.subregion}', '${i.capital}', '${
       i.area
-    }' ,'${i.topLevelDomain[0]}')">
+    }' ,'${i.topLevelDomain[0]}', '', '${i.languages[0].name}')">
             <img src="${i.flags.svg}" alt="pic">
             <div class="details">
                 <h5 id="country">${i.name}</h5>
@@ -130,8 +139,8 @@ function showCountryDetails(c, i, n, p, r, sr, cp, ar, tl, cur, lang) {
     capital2.innerHTML = cp;
     area.innerHTML = parseInt(ar).toLocaleString() + " km<sup>2</sup>";
     tld.innerHTML = tl;
-    //currencies.innerHTML += typeof cur;
-    //languages.innerHTML += typeof lang;
+    currencies.innerHTML = cur;
+    languages.innerHTML = lang;
 
     span.addEventListener("click", () => {
         modal.style.display = "none";
@@ -142,4 +151,20 @@ function showCountryDetails(c, i, n, p, r, sr, cp, ar, tl, cur, lang) {
             modal.style.display = "none";
         }
     });
+}
+
+function searchCountries(data) {
+    let found = [];
+    const y = document.getElementById("countries");
+
+    y.innerHTML = "";
+    data.forEach((i) => {
+        if (i.name.toLowerCase().includes(search.value.toLowerCase())) {
+            found.push(i);
+        }
+    });
+    displayCountries(found);
+    if (found.length == 0) {
+        y.innerHTML = "No results found.";
+    }
 }
